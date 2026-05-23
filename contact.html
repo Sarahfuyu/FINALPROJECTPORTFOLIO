@@ -1,113 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Contact Form</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        body {
+            background-color: #D0D1E6;
+            font-family: cursive;
+            text-align: center;
+        }
+
+        /* BLUE + GRAY BOX */
+        .contact-box {
+            background: linear-gradient(to right, #4A90E2, #808080);
+            width: 80%;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-style: italic;
+            color: white;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 20px;
+            color: white;
+        }
+
+        label {
+            color: white;
+            font-size: 18px;
+        }
+
+        input,
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button {
+            background-color: white;
+            color: #4A90E2;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+
+    </style>
+
+</head>
+
 <body>
 
-     <header>
+<header>
+
     <div class="container"> 
+
         <nav class="navbar">
+
             <a href="index.html">Home</a>
+
             <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="images.html">image gallery</a>
-            </li>
-            <li class="nav-item">
-            </li>
-            <li class="nav-item">
-            </li>
-            <li class="nav-item">
+
+                <li class="nav-item">
+                    <a href="images.html">image gallery</a>
+                </li>
+
             </ul>
+
             <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+
         </nav>
+
     </div>
-    </header>
-<h2>Please submit your name below</h2>
 
-<p id="demo">First and last name</p>
+</header>
 
-<button type="button" onclick="document.getElementById('demo').innerHTML = 'THANK YOU!';">
-  submit
-</button>
+<!-- BLUE + GRAY BOX STARTS HERE -->
 
-<form id="fcf-form-id" class="fcf-form-class" method="post" action="https://api.web3forms.com/submit">
-    <input type="hidden" name="access_key" value="1718fae1-c47a-4618-b03f-598f91c3fb3e">      
+<div class="contact-box">
+
+    <h2>Please submit your name below</h2>
+
+    <p id="demo">First and last name</p>
+
+    <button type="button"
+        onclick="document.getElementById('demo').innerHTML = 'THANK YOU!';">
+        Submit
+    </button>
+
+    <br><br>
+
+    <form id="fcf-form-id"
+        class="fcf-form-class"
+        method="post"
+        action="https://api.web3forms.com/submit">
+
+        <input type="hidden"
+            name="access_key"
+            value="1718fae1-c47a-4618-b03f-598f91c3fb3e">
+
         <div class="fcf-form-group">
-            <label for="Name" class="fcf-label">Your name</label>
+
+            <label for="Name">Your name</label>
+
             <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                <input type="text"
+                    id="Name"
+                    name="Name"
+                    required>
             </div>
+
         </div>
 
-
         <div class="fcf-form-group">
-            <label for="Email" class="fcf-label">Your email address</label>
+
+            <label for="Email">Your email address</label>
+
             <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                <input type="email"
+                    id="Email"
+                    name="Email"
+                    required>
             </div>
+
         </div>
 
-
         <div class="fcf-form-group">
-            <label for="Message" class="fcf-label">Your message</label>
+
+            <label for="Message">Your message</label>
+
             <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                <textarea id="Message"
+                    name="Message"
+                    rows="6"
+                    maxlength="3000"
+                    required></textarea>
             </div>
+
         </div>
 
-
         <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+
+            <button type="submit"
+                id="fcf-button">
+                Send Message
+            </button>
+
         </div>
 
     </form>
 
+</div>
 
-<style>
-body {
-    background-color: #D0D1E6;
-    font-family: cursive;
-    color: #D7B56B;
-    text-align: center;
-}
-
-h2 {
-    font-size: 32px;
-    font-style: italic;
-}
-
-p {
-    font-style: italic;
-    font-size: 20px;
-}
-</style>
-    <link rel="stylesheet" href="css/style.css">
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport"
-    content="width=device-width,initial-scale=1.0" />
-</head style="font-family:courier;" >
-<style>
-body {
-    background-color: #D0D1E6;
-    font-family: cursive;
-    color: #D7B56B;
-    text-align: center;
-}
-
-h2 {
-    font-size: 32px;
-    font-style: italic;
-}
-
-p {
-    font-style: italic;
-    font-size: 20px;
-}
-</style>
-  
 </body>
 </html>
-      
+make the text still be yellow
+<style>
+
+    body {
+        background-color: #D0D1E6;
+        font-family: cursive;
+        text-align: center;
+    }
+
+    /* BLUE + GRAY BOX */
+    .contact-box {
+        background: linear-gradient(to right, #8a8fe6);
+        width: 80%;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* KEEP TEXT YELLOW */
+    h2 {
+        font-size: 32px;
+        font-style: italic;
+        color: #D7B56B;
+    }
+
+    p {
+        font-style: italic;
+        font-size: 20px;
+        color: #D7B56B;
+    }
+
+    label {
+        color: #D7B56B;
+        font-size: 18px;
+    }
+
+    input,
+    textarea {
+        width: 80%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    button {
+        background-color: white;
+        color: #4A90E2;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #e6e6e6;
+    }
+
+</style>
